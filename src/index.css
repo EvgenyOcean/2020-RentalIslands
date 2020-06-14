@@ -1,13 +1,87 @@
-body {
+*, *::before, *::after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primaryColor: #FFC700;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #cfcfcf;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 3px;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.4;
+}
+h1 {
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+h3 {
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: 1em;
+}
+h4 {
+  font-size: 1.2rem;
+  line-height: 1.25;
+  margin-bottom: 1.25rem;
+}
+h5 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+h6 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: var(--mainSpacing);
+  color: var(--mainBlack);
+  background: var(--primaryColor);
+  padding: 0.4em 0.9em;
+  border: 3px solid var(--primaryColor);
+  transition: var(--mainTransition);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background: transparent;
+  color: var(--primaryColor);
+}
+.loading {
+  text-transform: capitalize;
+  text-align: center;
+  margin-top: 3rem;
+}
+.error {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 2rem 0;
+}
+.empty-search {
+  text-align: center;
+  text-transform: capitalize;
+  margin: 2rem 0;
+  padding: 1em;
+  letter-spacing: var(--mainSpacing);
 }
