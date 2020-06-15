@@ -2,12 +2,13 @@ import styled from 'styled-components';
 
 const Nav = styled.nav`
   background: rgba(0,0,0,0.3);
-  padding: 1em; 
+  padding: 1rem 0; 
   position: fixed; 
   top: 0; 
   left: 0; 
   width: 100%;
   .container{
+    padding: 0 1rem;
 
     .header{
       display: flex;

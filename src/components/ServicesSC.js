@@ -1,19 +1,24 @@
 import styled from 'styled-components';
 
 const ServicesSection = styled.section`
-  padding: 3rem 1rem;
+  padding: 3rem 0;
   background-color: var(--mainGrey);
   .container{
+    max-width: 1200px;
+    margin: 0 auto;
+    // width: 100%;
+    padding: 0 1rem;
 
     .services{
-      display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
-      grid-row-gap: 2rem; 
-      grid-column-gap: 1rem;
+      display: flex; 
+      justify-content: space-between;
+      text-align: center;
+      flex-wrap: wrap;
     }
 
-    article{
-      text-align: center;
+    .service{
+      width: 100%;
+      margin-bottom: 1rem;
 
       h6{
         letter-spacing: var(--mainSpacing);
@@ -24,20 +29,17 @@ const ServicesSection = styled.section`
         color: var(--primaryColor);
       }
     }
-    
+  }
 
-    @media (min-width: 768px){
-      max-width: 1200px; 
-      margin: 0 auto;
-      .services{
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      }
+  @media (min-width: 768px){
+    .services .service{
+      width: 45%;
     }
+  }
 
-    @media (min-width: 1100px){
-      .services{
-        grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
-      }
+  @media (min-width: 1100px){
+    .services .service{
+      width: 20%;
     }
   }
 `
