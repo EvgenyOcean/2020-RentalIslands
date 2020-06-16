@@ -5,10 +5,13 @@ import 'normalize.css';
 import './index.css';
 import App from './App';
 import {BrowserRouter} from 'react-router-dom';
+import DataContextProvider from './contexts/DataContext';
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <DataContextProvider>
+      <App />
+    </DataContextProvider>
   </BrowserRouter>,
   document.getElementById('root')
 );

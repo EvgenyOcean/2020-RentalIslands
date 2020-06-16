@@ -14,7 +14,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={PageHome}/>
         <Route exact path="/islands" component={PageIslands}/>
-        <Route exact path="/islands/:id" component={PageIsland}/>
+        <Route exact path="/islands/:path" component={PageIsland}/>
         <Route component={PageError}/>
       </Switch>
     </>

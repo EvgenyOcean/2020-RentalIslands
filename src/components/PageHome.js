@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import Hero from './Hero';
 import Services from './Services';
+import TopIslands from './TopIslands';
 
 function Home(props) {
   return (
@@ -19,6 +20,7 @@ function Home(props) {
         </div>
       </Hero>
       <Services />
+      <TopIslands />
     </>
   );
 }
