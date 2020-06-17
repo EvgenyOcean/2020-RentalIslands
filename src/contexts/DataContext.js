@@ -4,7 +4,7 @@ import data from '../data';
 export const DataContext = React.createContext();
 
 
-// 1. Find top rooms and put thme into an array
+// 1. Find top rooms and put them into an array
 // 2. Find all rooms and put them into an array
 class DataContextProvider extends Component {
   constructor(props){
@@ -13,7 +13,12 @@ class DataContextProvider extends Component {
       islands: [], 
       topIslands: [], 
       loading: true,
-    }
+    };
+    this.checkPath = this.checkPath.bind(this);
+  }
+
+  checkPath(path){
+    return this.state.islands.find(island => island.path === path); 
   }
 
   componentDidMount(){
@@ -24,7 +29,7 @@ class DataContextProvider extends Component {
 
   render() {
     return (
-      <DataContext.Provider value={{ ...this.state }}>
+      <DataContext.Provider value={{ ...this.state, checkPath: this.checkPath }}>
         {this.props.children}
       </DataContext.Provider>
     );
