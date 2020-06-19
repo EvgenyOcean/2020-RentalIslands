@@ -8,8 +8,6 @@ import GoldenLagoon from './images/GoldenLagoon.jpg';
 import DragonWing from './images/DragonWing.jpg';
 import DragonHead from './images/DragonHead.jpg';
 
-// Lifestyles: Diving, Fishing, Spa, Honeymoons, Family, Weddings, Culinary, Eco, Team Building
-
 export default [
   {
     id: 1, 
@@ -113,7 +111,7 @@ export default [
     location: "Nova Scotia, Canada", 
     path: "Golden-Lagoon", 
     type: "Full Service",
-    lifestyles: ["Weedings", "Honeymoons", "Eco", "Culinary", "Diving"],
+    lifestyles: ["Weddings", "Honeymoons", "Eco", "Culinary", "Diving"],
     weekPrice: 1300,
     islandSize: "medium",
     rentalYacht: false,

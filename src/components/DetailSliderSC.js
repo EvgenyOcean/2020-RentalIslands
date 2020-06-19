@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const DetailSliderDIV = styled.div`
-  width: 100vw;
+  width: 100%;
   max-width: 1920px;
   margin: 0 auto;
   padding: 2rem 5vw;

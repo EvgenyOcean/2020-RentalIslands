@@ -3,9 +3,6 @@ import data from '../data';
 
 export const DataContext = React.createContext();
 
-
-// 1. Find top rooms and put them into an array
-// 2. Find all rooms and put them into an array
 class DataContextProvider extends Component {
   constructor(props){
     super(props);
