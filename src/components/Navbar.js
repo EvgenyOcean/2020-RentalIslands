@@ -7,7 +7,7 @@ import {FaAlignJustify} from 'react-icons/fa';
 class Navbar extends Component {
   constructor(props){
     super(props);
-    this.state = {isOpen: false};
+    this.state = {isOpen: false, dark: false};
     this.handleBurgerClick = this.handleBurgerClick.bind(this);
   }
 
@@ -15,9 +15,27 @@ class Navbar extends Component {
     this.setState(prevState => ({isOpen: !prevState.isOpen}));
   }
 
+  componentDidMount(){
+    let navbar = document.getElementById('navbar');
+    if (!navbar) return;
+    let changeNavColor = () => {
+      if (window.pageYOffset > 100 && !navbar.classList.contains('dark')){
+        this.setState({dark: true});
+      } else if (window.pageYOffset < 100 && navbar.classList.contains('dark')){
+        this.setState({dark: false});
+      }
+    }
+    document.addEventListener('scroll', changeNavColor); 
+
+    return () => {document.removeEventListener('scroll', changeNavColor)};
+  }
+
   render() {
+    let darkClass = this.state.dark && 'dark';
+    let openClass = this.state.isOpen && 'isOpen';
+
     return (
-      <Nav>
+      <Nav id="navbar" className={[darkClass, openClass]}>
         <div className="container">
           <div className="header">
             <Link to="/"><img src={logo} alt="Islands Inc."/></Link>
@@ -25,7 +43,7 @@ class Navbar extends Component {
               <FaAlignJustify/>
             </button>
           </div>
-          <ul className={this.state.isOpen ? "navbar isOpen" : "navbar"}>
+          <ul className="navbar">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/islands">Islands</Link></li>
           </ul>

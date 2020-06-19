@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
 const Nav = styled.nav`
+  &.dark{
+    background: var(--mainBlack);
+  }
+
   background: rgba(0,0,0,0.3);
   padding: 1rem 0; 
   position: fixed; 
@@ -71,16 +75,20 @@ const Nav = styled.nav`
         }
       }
 
-      &.isOpen{
-        height: 100px;
-
-        @media (min-width: 768px){
-          height: auto;
-        }
-      }
-
       @media (min-width: 768px){
         display: flex; 
+        height: auto;
+      }
+    }
+  }
+
+  
+  &.isOpen{
+    background: var(--mainBlack);
+    .navbar{
+      height: 100px;
+
+      @media (min-width: 768px){
         height: auto;
       }
     }
