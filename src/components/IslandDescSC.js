@@ -13,7 +13,6 @@ const IslandDescSECTION = styled.section`
 
     .table-info{
       flex: 1;
-      width: 100%;
       table-layout: fixed;
       background-color: var(--offWhite);
       padding: 1rem;
